@@ -12,19 +12,19 @@ public class SumORSubset{
             bitFreq.add(0);
         } 
         
-        for(int i = 0   ;i<n;i++){
+        for(int i = 0;i<n;i++){
             for (int k = INTSIZE-1; k>=0; k--){
                 bitFreq.set(k,bitFreq.get(k)+getBit(arr[i],k));
             }
             
          }
-    for (int i=0; i < INTSIZE; ++i){
-        int count = bitFreq.get(i);
-        while(count>0){
-            result+= Math.pow(2,i)*Math.pow(2,n-count--);
+        for (int i=0; i < INTSIZE; ++i){
+            int count = bitFreq.get(i);
+            while(count>0){
+                result+= Math.pow(2,i)*Math.pow(2,n-count--);
+            }
         }
-    }
-    return result;
+        return result;
     }
 
 public static void main(String args[]){
