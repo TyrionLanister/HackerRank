@@ -15,9 +15,6 @@ int bitWiseOR(vector<int> &arr)
         for (int k = INT_SIZE-1; k>=0; k--)
             bitFreq[k]+= getBit(arr[i],k);
     }
-    for (auto& i: bitFreq)
-        std::cout << i << ' ';
-    cout<<endl;
     for (int i=0; i < INT_SIZE; ++i){
         while(bitFreq[i]){
             result+= pow(2,i)*pow(2,n-bitFreq[i]--);
