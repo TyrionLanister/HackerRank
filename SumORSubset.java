@@ -8,7 +8,7 @@ public class SumORSubset{
         int result = 0;
         int n = arr.length;
         Vector<Integer> bitFreq = new Vector<Integer>(BIT_SIZE);
-        for(int i = 0;i<INT_SIZE;i++){
+        for(int i = 0;i<BIT_SIZE;i++){
             bitFreq.add(0);
         } 
         
