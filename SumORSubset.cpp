@@ -11,7 +11,7 @@ int bitWiseOR(vector<int> &arr)
     int result = 0;
     vector<int> bitFreq(BIT_SIZE);
     int n = arr.size();
-    for(int i = 0;i<arr.size();i++){
+    for(int i = 0;i<n;i++){
         for (int k = BIT_SIZE-1; k>=0; k--)
             bitFreq[k]+= getBit(arr[i],k);
     }
